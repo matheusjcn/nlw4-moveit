@@ -13,6 +13,10 @@
   padding: 1.5rem 2rem;
 }
 
+.challegeBoxContainer.dark {
+  color: var(--white);
+}
+
 .challengeNotActive {
   display: flex;
   flex-direction: column;

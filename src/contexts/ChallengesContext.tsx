@@ -48,7 +48,6 @@ export function ChallengesProvider({
   const experienceToNextLevel = Math.pow((level + 1) * 4, 2);
 
   useEffect(() => {
-    console.log('Request Permission');
     Notification.requestPermission();
   }, []);
 

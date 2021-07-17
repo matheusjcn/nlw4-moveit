@@ -3,6 +3,10 @@
   align-items: center;
 }
 
+.profileContainer.dark {
+  color: var(--white);
+}
+
 .profileContainer img {
   width: 5.5rem;
   height: 5.5rem;
@@ -17,6 +21,10 @@
   font-size: 1.5rem;
   font-weight: 600;
   color: var(--title);
+}
+
+.profileContainer.dark div strong {
+  color: var(--white);
 }
 
 .profileContainer div p {

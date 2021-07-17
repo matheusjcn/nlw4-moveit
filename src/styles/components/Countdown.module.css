@@ -58,8 +58,20 @@
   transition: background-color 0.2s;
 }
 
-.countdownButton:not(:disabled):hover {
+.countdownButton.dark {
+  background-color: var(--blue-twitter);
+}
+
+.countdownButton.light {
+  background: var(--background-dark);
+}
+
+.countdownButton.dark:not(:disabled):hover {
   background-color: var(--blue-dark);
+}
+
+.countdownButton:not(:disabled):hover {
+  background-color: var(--background-dark-2);
 }
 
 .countdownButtonActive {

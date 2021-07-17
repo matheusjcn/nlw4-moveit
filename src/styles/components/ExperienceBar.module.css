@@ -3,6 +3,10 @@
   align-items: center;
 }
 
+.experienceBar.dark {
+  color: var(--white);
+}
+
 .experienceBar span {
   font-size: 1rem;
 }

@@ -9,3 +9,8 @@ Para iniciar o projeto, após o clone, instale as dependências:
 Após concluída a instalação basta digitar, o seguinte comando no terminal:
 
 - `npm run dev`
+
+### Aprimoramentos
+
+- Adição do Footer
+- Dark Theme

@@ -1,5 +1,6 @@
 import { useContext } from 'react';
 import { CountdownContext } from '../contexts/CountdownContext';
+import { useTheme } from '../contexts/ThemeContext';
 import styles from '../styles/components/Countdown.module.css';
 
 const Countdown = () => {
@@ -11,6 +12,7 @@ const Countdown = () => {
     startCountdown,
     resetCountdown,
   } = useContext(CountdownContext);
+  const { theme } = useTheme();
 
   const [minuteLeft, minuteRight] = String(minutes).padStart(2, '0').split('');
   const [secondLeft, secondRight] = String(seconds).padStart(2, '0').split('');
@@ -46,7 +48,9 @@ const Countdown = () => {
           ) : (
             <button
               type="button"
-              className={styles.countdownButton}
+              className={`${styles.countdownButton} ${
+                theme === 'light' ? styles.light : styles.dark
+              } `}
               onClick={startCountdown}
             >
               Iniciar um ciclo

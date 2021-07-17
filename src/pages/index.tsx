@@ -9,6 +9,8 @@ import ChallengeBox from '../components/ChallengeBox';
 import styles from '../styles/components/Home.module.css';
 import { CountdownProvider } from '../contexts/CountdownContext';
 import { ChallengesProvider } from '../contexts/ChallengesContext';
+import FooterNLW from '../components/Footer';
+import { useTheme } from '../contexts/ThemeContext';
 
 interface HomeProps {
   level: number;
@@ -17,33 +19,42 @@ interface HomeProps {
 }
 
 export default function Home(props: HomeProps) {
+  const { theme } = useTheme();
+
   return (
-    <ChallengesProvider
-      level={props.level}
-      currentExperience={props.currentExperience}
-      challengesCompleted={props.challengesCompleted}
+    <div
+      id="home"
+      className={` ${theme === 'light' ? styles.light : styles.dark}`}
     >
-      <div className={styles.container}>
-        <Head>
-          <title>Início | move.it</title>
-        </Head>
+      <ChallengesProvider
+        level={props.level}
+        currentExperience={props.currentExperience}
+        challengesCompleted={props.challengesCompleted}
+      >
+        <div className={styles.container}>
+          <Head>
+            <title>Início | move.it</title>
+          </Head>
 
-        <Experiencebar />
+          <Experiencebar />
 
-        <CountdownProvider>
-          <section>
-            <div>
-              <Profile />
-              <CompletedChallenges />
-              <Countdown />
-            </div>
-            <div>
-              <ChallengeBox />
-            </div>
-          </section>
-        </CountdownProvider>
-      </div>
-    </ChallengesProvider>
+          <CountdownProvider>
+            <section>
+              <div>
+                <Profile />
+                <CompletedChallenges />
+                <Countdown />
+              </div>
+              <div>
+                <ChallengeBox />
+              </div>
+            </section>
+          </CountdownProvider>
+        </div>
+
+        <FooterNLW />
+      </ChallengesProvider>
+    </div>
   );
 }
 

@@ -7,15 +7,20 @@
 :root {
   --white: #fff;
   --background: #f2f3f5;
+  --background-dark: #0b132b;
+  --background-dark-2: #364958;
   --gray-line: #dcdde0;
-  --text: #666666;
+  --gray-line-2: #8a8a8a;
+  --text: #474747;
   --text-highlight: #b3b9ff;
   --title: #2e384d;
   --red: #e83f5b;
   --green: #46d62b;
-  --blue: #5965e0;
-  --blue-dark: #4953b8;
-  --blue-twitter: #2aa9e0;
+  --blue: #555ebd;
+  --blue-dark: #026f7e;
+  --blue-twitter: #016370;
+  --blue-saphire: #2e5266;
+  --footer-light: #d3d0cb;
 }
 
 @media (max-width: 1080px) {
@@ -47,15 +52,21 @@ a {
 }
 
 body {
-  background-color: var(--background);
-  color: var(--text);
+  height: 100%;
+}
+
+.wrapper {
+  min-height: 100%;
+  position: relative;
 }
 
 .container {
-  height: 100vh;
+  height: 100%;
   max-width: 992px;
   margin: 0 auto;
-  padding: 2.5rem 2rem;
+  padding: 2.5rem 2rem 2rem 2rem;
+
+  overflow: hidden;
 
   display: flex;
   flex-direction: column;
