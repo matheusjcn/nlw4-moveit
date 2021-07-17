@@ -19,7 +19,11 @@ const Countdown = () => {
 
   return (
     <div>
-      <div className={styles.countdownContainer}>
+      <div
+        className={`${styles.countdownContainer} ${
+          theme === 'light' ? styles.light : styles.dark
+        }`}
+      >
         <div>
           <span>{minuteLeft}</span>
           <span>{minuteRight}</span>

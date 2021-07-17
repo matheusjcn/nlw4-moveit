@@ -1,14 +1,16 @@
 import { useContext } from 'react';
 import { ChallengesContext } from '../contexts/ChallengesContext';
 import { CountdownContext } from '../contexts/CountdownContext';
+import { useTheme } from '../contexts/ThemeContext';
 import styles from '../styles/components/ChallengeBox.module.css';
 
 const ChallengeBox = () => {
   const { activeChallenge, resetChallenge, completeChallenge } =
     useContext(ChallengesContext);
   const { resetCountdown } = useContext(CountdownContext);
+  const { theme } = useTheme();
 
-  const handleChallengeSuccceeded = () => {
+  const handleChallengeSucceeded = () => {
     completeChallenge();
     resetCountdown();
   };
@@ -19,9 +21,17 @@ const ChallengeBox = () => {
   };
 
   return (
-    <div className={styles.challegeBoxContainer}>
+    <div
+      className={`${styles.challegeBoxContainer} ${
+        theme === 'light' ? styles.light : styles.dark
+      }`}
+    >
       {activeChallenge ? (
-        <div className={styles.challengeActive}>
+        <div
+          className={`${styles.challengeActive} ${
+            theme === 'light' ? styles.light : styles.dark
+          }`}
+        >
           <header>Ganhe {activeChallenge.amount} xp</header>
           <main>
             <img src={`icons/${activeChallenge.type}.svg`} alt="icone" />
@@ -39,7 +49,7 @@ const ChallengeBox = () => {
             <button
               type="button"
               className={styles.challengeSucceededButton}
-              onClick={handleChallengeSuccceeded}
+              onClick={handleChallengeSucceeded}
             >
               Completei
             </button>

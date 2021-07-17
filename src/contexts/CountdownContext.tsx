@@ -40,7 +40,7 @@ export function CountdownProvider({ children }: CountdownProviderProps) {
 
   const resetCountdown = () => {
     clearTimeout(countdownTimeOut);
-    setTime(0.05 * 60);
+    setTime(0.2 * 60);
 
     setIsActive(false);
     setHasFinished(false);

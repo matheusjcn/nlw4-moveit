@@ -14,6 +14,10 @@
 }
 
 .challegeBoxContainer.dark {
+  background: var(--background-dark-3);
+}
+
+.challegeBoxContainer.dark {
   color: var(--white);
 }
 
@@ -57,6 +61,10 @@
   border-bottom: 1px solid var(--gray-line);
 }
 
+.challengeActive.dark header {
+  color: var(--white);
+}
+
 .challengeActive main {
   flex: 1;
   display: flex;
@@ -70,6 +78,10 @@
   font-weight: 600;
   color: var(--title);
   margin: 1.5rem 0 1rem;
+}
+
+.challengeActive.dark main strong {
+  color: var(--white);
 }
 
 .challengeActive main p {
