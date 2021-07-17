@@ -1,5 +1,4 @@
 div.dark {
-  background: coral;
   background: var(--background-dark-2);
   /* color: var(--text); */
 }
@@ -26,4 +25,25 @@ div.light {
   gap: 6.25rem;
   align-content: center;
   margin-top: 1.5rem;
+}
+
+@media (max-width: 600px) {
+  .container {
+    /* margin-bottom: 8rem; */
+    padding: 0 2rem;
+    background: inherit;
+    height: 100%;
+  }
+
+  .container section {
+    display: flex;
+    flex-direction: column;
+
+    margin-bottom: 4rem;
+
+    background: inherit;
+  }
+
+  .container section > div > div {
+  }
 }

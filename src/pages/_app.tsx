@@ -4,7 +4,7 @@ import '../styles/global.css';
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeContextProvider>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </ThemeContextProvider>
   );
 }

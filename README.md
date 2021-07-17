@@ -14,3 +14,4 @@ Após concluída a instalação basta digitar, o seguinte comando no terminal:
 
 - Adição do Footer
 - Dark Theme
+- Responsividade
