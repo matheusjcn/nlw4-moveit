@@ -2,14 +2,14 @@
 
 #### Aplicação construída durante o NLW-4. Utilizando NextJs com Typescript;
 
-O projeto, baseado em algumas metodologias, busca uma melhor realação entre o tempo de trabalho e as atividades físicas. Propondo
+O projeto, baseado em algumas metodologias, busca uma melhor relação entre o tempo de trabalho e as atividades físicas. Propondo
 várias atividades que podem ser intercaladas com as tarefas.
 
 Para iniciar o projeto, após o clone, instale as dependências:
 
 - `npm install`
 
-Após concluída a instalação, basta digitar o seguinte comando no terminal:
+Após isso, incie a aplicação com o comando:
 
 - `npm run dev`
 
