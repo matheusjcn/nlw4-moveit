@@ -9,7 +9,7 @@ Para iniciar o projeto, após o clone, instale as dependências:
 
 - `npm install`
 
-Após isso, incie a aplicação com o comando:
+Após isso, inicie a aplicação com o comando:
 
 - `npm run dev`
 
